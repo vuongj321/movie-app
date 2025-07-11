@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="flex justify-end bg-gray-200">
-      <a className="p-2" href="/">
+      <Link className="p-2" to="/">
         Home
-      </a>
-      <a className="p-2" href="/favorites">
+      </Link>
+      <Link className="p-2" to="/favorites">
         Favorites
-      </a>
+      </Link>
     </div>
   );
 };
