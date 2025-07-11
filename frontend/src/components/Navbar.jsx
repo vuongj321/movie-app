@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-end bg-gray-200">
+    <div className="flex justify-end bg-gray-100 border-b-1">
       <Link className="p-2" to="/">
         Home
       </Link>

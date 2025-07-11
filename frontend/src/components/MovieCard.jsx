@@ -17,14 +17,20 @@ const MovieCard = ({ movie }) => {
   };
 
   return (
-    <div className="relative h-125 w-75 rounded-lg bg-gray-100 m-3">
+    <div className="relative h-125 w-75 rounded-lg bg-gray-100 m-3 hover:shadow-2xl hover:bg-white transform hover:-translate-0.5 transition">
       <img
         className="rounded-t-lg"
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
       />
       <button className="absolute right-1 top-1" onClick={handleLike}>
-        {<Heart className={`${favorite ? "text-red-300" : "text-white"}`} />}
+        {
+          <Heart
+            className={`${
+              favorite ? "text-red-300 fill-red-400" : "text-white"
+            }`}
+          />
+        }
       </button>
 
       <div className="text-lg leading-5 m-1">

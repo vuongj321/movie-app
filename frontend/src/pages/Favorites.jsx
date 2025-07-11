@@ -8,7 +8,7 @@ const Favorites = () => {
   if (favorites.length > 0) {
     console.log(favorites);
     return (
-      <div>
+      <div className="bg-gray-300 min-h-screen">
         <div className="flex justify-center flex-wrap">
           {favorites.map((movie) => (
             <MovieCard movie={movie} key={movie.id} />
@@ -19,8 +19,10 @@ const Favorites = () => {
   }
 
   return (
-    <div>
-      <h1>No favorites yet...</h1>
+    <div className="flex justify-center bg-gray-300 min-h-screen">
+      <div className="text-3xl">
+        <h1>No favorites yet...</h1>
+      </div>
     </div>
   );
 };

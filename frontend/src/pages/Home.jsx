@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
 import { getPopularMovies, searchMovie } from "../services/api";
+import { Loader } from "lucide-react";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -41,23 +42,27 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="bg-gray-300 min-h-screen">
       <div className="flex justify-center">
         <form onSubmit={handleSearch}>
           <input
-            className="border-2 p-1 m-1"
+            className="border-1 p-1 m-1 bg-gray-100 rounded-xl"
             type="text"
             placeholder="Search for movies..."
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button className="border-2 p-1 m-1">Search</button>
+          <button className="border-1 p-1 m-1 bg-gray-100 rounded-lg">
+            Search
+          </button>
         </form>
       </div>
 
       {error && <div>{error}</div>}
 
       {loading ? (
-        <div>Loading...</div>
+        <div className="flex justify-center items-center min-h-screen">
+          <Loader />
+        </div>
       ) : (
         <div className="flex justify-center flex-wrap">
           {movies.map((movie) => (
