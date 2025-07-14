@@ -1,12 +1,36 @@
-# React + Vite
+# Movie Finder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This movie finder app can be used to find any movies and keep track of your favorite ones! It uses [TMDB](https://www.themoviedb.org/?language=en-US) and fetches all the current popular movies to display on the home page. You can search for movies and like them to add it to the favorite page, which displays all of your favorites.
 
-Currently, two official plugins are available:
+## What is used
+- Javascript
+- HTML
+- CSS
+- React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to run
 
-## Expanding the ESLint configuration
+Install dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+Create .env file in root folder and input access token from [TMDB](https://www.themoviedb.org/?language=en-US)
+```javascript
+VITE_API_ACCESS_TOKEN="[INSERT YOUR API ACCESS TOKEN HERE]"
+```
+
+Run application
+
+```bash
+npm run dev
+```
+
+## Demo
+
+
+https://github.com/user-attachments/assets/2584d6cd-b6e1-4944-81f9-c7201419a5ac
+
+
+
